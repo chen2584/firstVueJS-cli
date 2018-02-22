@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ msg }} {{ chen }}</h1>
     <p>
       For guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -26,15 +26,30 @@
       <li><a href="https://vue-loader.vuejs.org/en" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+
+    <Chen kuy="kuy" kuyz="kuy2"></Chen>
   </div>
 </template>
 
 <script>
+import Chen from './Chen.vue';
+let chen = { chen: "kuyz" };
 export default {
   name: 'HelloWorld',
+  components: {
+    Chen
+  },
   props: {
     msg: String
+  },
+  data() {
+    return chen;
   }
+  /*methods: {
+    reverseMessage: function() {
+      this.msg
+    }
+  }*/
 }
 </script>
 
