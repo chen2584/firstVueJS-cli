@@ -13,6 +13,7 @@ const router = new VueRouter({
   routes: [
     { path: '/', component: HelloWorld },
     { path: '/chen', component: Chen },
+    { path: '**', component: App },
   ]
 });
 
