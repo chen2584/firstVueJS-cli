@@ -27,13 +27,15 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
 
-    <Chen kuy="kuy" kuyz="kuy2"></Chen>
+    <Chen kuy="ChenKuy1" kuyz="Chen2"></Chen>
+    {{ numChen }} <input type="submit" v-on:click="numChen += 1"/>
+    <button @click="say2()">Say</button>
   </div>
 </template>
 
 <script>
 import Chen from './Chen.vue';
-let chen = { chen: "kuyz" };
+let chen = { chen: "kuyz", numChen: 1 };
 export default {
   name: 'HelloWorld',
   components: {
@@ -41,6 +43,14 @@ export default {
   },
   props: {
     msg: String
+  },
+  methods: {
+    say() {
+      alert("Hello World");
+    },
+    say2() {
+      alert("Hello World2");
+    }
   },
   data() {
     return chen;
